@@ -58,7 +58,7 @@ def pred_and_plot(model, filename,class_names=class_names):
     return class_name
     
   else:
-    return "Sorry, this doesn't appear to be a Nigerian Food. Please try another image"
+    return "Sorry, this doesn't appear to be a Nigerian Food."
 
   # return pred_class
 
