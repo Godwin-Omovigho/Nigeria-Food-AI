@@ -118,7 +118,7 @@ def show_predict_page():
     for i, food in enumerate(foods, start=1):
       st.write(f"{i}. {food}")
 
-
+    st.markdown("<p style='font-size: 25px; font-weight: bold; color: red;'> Note: How well the model works depends on the data it learned from and how many examples there are for each group in the training data.</p>", unsafe_allow_html=True)
     uploaded_image = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
 
     if uploaded_image is not None:
