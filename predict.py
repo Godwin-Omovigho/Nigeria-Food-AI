@@ -38,7 +38,7 @@ def pred_and_plot(model, filename,class_names=class_names):
   Imports an image located at filename, makes a prediction with model and plots the
   image with the predicted class as the title"""
 
-  confidence_threshold=0.8
+  confidence_threshold=0.5
 
   #Import the target image and preprocess it
   img=load_and_pred_image(filename)
@@ -54,16 +54,13 @@ def pred_and_plot(model, filename,class_names=class_names):
 
   # Check if the confidence is above the threshold
   if confidence >= confidence_threshold:
-    #class_name = class_names[pred_class]
-    class_name = pred_class
+    class_name = class_names[pred_class]
     return class_name
     
   else:
-    return "Sorry, this doesn't appear to be a Nigerian Food."
+    return "Sorry, this doesn't appear to be a fruit. Please try another image."
 
   # return pred_class
-
-
 
 def show_predict_page():
 
