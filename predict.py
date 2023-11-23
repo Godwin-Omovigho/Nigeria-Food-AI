@@ -54,7 +54,8 @@ def pred_and_plot(model, filename,class_names=class_names):
 
   # Check if the confidence is above the threshold
   if confidence >= confidence_threshold:
-    class_name = class_names[pred_class]
+    #class_name = class_names[pred_class]
+    class_name = pred_class
     return class_name
     
   else:
